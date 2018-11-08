@@ -1,14 +1,14 @@
 # SEBA Values
 
 envoyForEtcdImage: 'matteoscandolo/voltha/voltha-envoy:berlin-1.0.2'
-netconfImage: 'voltha/voltha-netconf:latest'
+netconfImage: 'matteoscandolo/voltha-netconf:berlin-1.0.2'
 ofagentImage: 'matteoscandolo/voltha-ofagent:berlin-1.0.2'
 vcliImage: 'matteoscandolo/voltha-cli:berlin-1.0.2'
 #vcoreImage: 'matteoscandolo/voltha-voltha:dev'
 vcoreImage: 'matteoscandolo/voltha-voltha:berlin-1.0.2'
 freeradiusImage: 'tpdock/freeradius:latest'
 ingressControllerImage: 'quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.10.2'
-httpBackendImage: 'siriuszg/defaultbackend:1.4'
+httpBackendImage: 'gcr.io/google_containers/defaultbackend:1.4'
 
 etcd-operator:
   etcdCluster:
@@ -49,13 +49,13 @@ sadis-server:
     tag: 'latest'
 
 # kafka
-image: 'matteoscandolo/confluentinc/cp-kafka'
+image: 'confluentinc/cp-kafka'
 configurationOverrides:
   "confluent.support.metrics.enable": false
 
 zookeper:
   image:
-    repository: 'google_samples/k8szk'
+    repository: 'gcr.io/google_samples/k8szk'
     tag: v3
 
 etcd-operator:
