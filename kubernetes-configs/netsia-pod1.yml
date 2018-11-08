@@ -4,9 +4,17 @@ envoyForEtcdImage: 'matteoscandolo/voltha/voltha-envoy:berlin-1.0.2'
 netconfImage: 'matteoscandolo/voltha/voltha-netconf:berlin-1.0.2'
 ofagentImage: 'matteoscandolo/voltha/voltha-ofagent:berlin-1.0.2'
 vcliImage: 'matteoscandolo/voltha/voltha-cli:berlin-1.0.2'
-vcoreImage: 'matteoscandolo/voltha/voltha-voltha:berlin-1.0.2'
+vcoreImage: 'matteoscandolo/voltha/voltha-voltha:dev'
+# vcoreImage: '192.168.100.1:30500/voltha/voltha-voltha:berlin-1.0.2'
+freeradiusImage: 'tpdock/freeradius:latest'
+ingressControllerImage: 'quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.10.2'
+httpBackendImage: 'google_containers/defaultbackend:1.4'
 
-onosImage: 'matteoscandolo/onosproject/onos:1.13.5'
+etcd-operator:
+  etcdCluster:
+    size: 1
+
+onosImage: 'onosproject/onos:1.13.5'
 
 # xos core
 images:
@@ -29,44 +37,8 @@ xos-gui:
       tag: 2.0.0
 xos-db:
   image:
-  repository: 'matteoscandolo/postgres'
-  tag: '10.3-alpine'
-
-# synchronizers
-att-workflow-driver:
-  image:
-    repository: matteoscandolo/xosproject/att-workflow-driver-synchronizer
-    tag: 'master'
-
-volt:
-  image:
-    repository: matteoscandolo/xosproject/volt-synchronizer
-    tag: 'candidate'
-
-rcord:
-  image:
-    repository: matteoscandolo/xosproject/rcord-synchronizer
-    tag: 1.0.4
-
-onos-service:
-  image:
-    repository: matteoscandolo/xosproject/onos-synchronizer
-    tag: 2.0.5
-
-fabric:
-  image:
-    repository: matteoscandolo/xosproject/fabric-synchronizer
-    tag: 2.1.3
-
-fabric-crossconnect:
-  image:
-    repository: matteoscandolo/xosproject/fabric-crossconnect-synchronizer
-    tag: 1.1.1
-
-kubernetes:
-  image:
-    repository: matteoscandolo/xosproject/kubernetes-synchronizer
-    tag: 1.0.4
+    repository: 'postgres'
+    tag: '10.3-alpine'
 
 tosca_loaderImage: 'matteoscandolo/xosproject/tosca-loader:1.0.1'
 
@@ -77,27 +49,31 @@ sadis-server:
     tag: 'latest'
 
 # kafka
-image: 'matteoscandolo/confluentinc/cp-kafka:4.1.2-2'
+image: 'matteoscandolo/confluentinc/cp-kafka'
+configurationOverrides:
+  "confluent.support.metrics.enable": false
 
 zookeper:
-  image: 'matteoscandolo/google_samples/k8szk:v3'
+  image:
+    reposiroty: 'google_samples/k8szk'
+    tag: v3
 
 etcd-operator:
   etcdOperator:
     image:
-      repository: matteoscandolo/quay.io/coreos/etcd-operator
+      repository: quay.io/coreos/etcd-operator
       tag: v0.7.0
   etcdCluster:
     image:
-      repository: matteoscandolo/quay.io/coreos/etcd
+      repository: quay.io/coreos/etcd
       tag: v3.2.13
   backupOperator:
     image:
-      repository: matteoscandolo/quay.io/coreos/etcd-operator
+      repository: quay.io/coreos/etcd-operator
       tag: v0.7.0
   restoreOperator:
     image:
-      repository: matteoscandolo/quay.io/coreos/etcd-operator
+      repository: quay.io/coreos/etcd-operator
       tag: v0.7.0
 
 application_logs: |
