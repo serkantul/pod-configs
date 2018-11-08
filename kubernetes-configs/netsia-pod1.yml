@@ -1,10 +1,10 @@
 # SEBA Values
 
 envoyForEtcdImage: 'matteoscandolo/voltha/voltha-envoy:berlin-1.0.2'
-netconfImage: 'matteoscandolo/voltha/voltha-netconf:berlin-1.0.2'
-ofagentImage: 'matteoscandolo/voltha/voltha-ofagent:berlin-1.0.2'
-vcliImage: 'matteoscandolo/voltha/voltha-cli:berlin-1.0.2'
-vcoreImage: 'matteoscandolo/voltha/voltha-voltha:dev'
+netconfImage: 'voltha/voltha-netconf:latest'
+ofagentImage: 'matteoscandolo/voltha-ofagent:berlin-1.0.2'
+vcliImage: 'matteoscandolo/voltha-cli:berlin-1.0.2'
+vcoreImage: 'matteoscandolo/voltha-voltha:dev'
 # vcoreImage: '192.168.100.1:30500/voltha/voltha-voltha:berlin-1.0.2'
 freeradiusImage: 'tpdock/freeradius:latest'
 ingressControllerImage: 'quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.10.2'
@@ -55,7 +55,7 @@ configurationOverrides:
 
 zookeper:
   image:
-    reposiroty: 'google_samples/k8szk'
+    repository: 'google_samples/k8szk'
     tag: v3
 
 etcd-operator:
