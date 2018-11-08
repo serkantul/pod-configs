@@ -1,103 +1,103 @@
 # SEBA Values
 
-envoyForEtcdImage: 'voltha/voltha-envoy:berlin-1.0.2'
-netconfImage: 'voltha/voltha-netconf:berlin-1.0.2'
-ofagentImage: 'voltha/voltha-ofagent:berlin-1.0.2'
-vcliImage: 'voltha/voltha-cli:berlin-1.0.2'
-vcoreImage: 'voltha/voltha-voltha:berlin-1.0.2'
+envoyForEtcdImage: 'matteoscandolo/voltha/voltha-envoy:berlin-1.0.2'
+netconfImage: 'matteoscandolo/voltha/voltha-netconf:berlin-1.0.2'
+ofagentImage: 'matteoscandolo/voltha/voltha-ofagent:berlin-1.0.2'
+vcliImage: 'matteoscandolo/voltha/voltha-cli:berlin-1.0.2'
+vcoreImage: 'matteoscandolo/voltha/voltha-voltha:berlin-1.0.2'
 
-onosImage: 'onosproject/onos:1.13.5'
+onosImage: 'matteoscandolo/onosproject/onos:1.13.5'
 
 # xos core
 images:
   xos_core:
-    repository: xosproject/xos-core
+    repository: matteoscandolo/xosproject/xos-core
     tag: 2.1.9
   xos_chameleon:
-    repository: xosproject/chameleon
+    repository: matteoscandolo/xosproject/chameleon
     tag: 2.1.9
   xos_tosca:
-    repository: xosproject/xos-tosca
+    repository: matteoscandolo/xosproject/xos-tosca
     tag: 1.1.3
 xos-gui:
   images:
     xos_gui:
-      repository: xosproject/xos-gui
+      repository: matteoscandolo/xosproject/xos-gui
       tag: 1.0.3
     xos_ws:
-      repository: xosproject/xos-ws
+      repository: matteoscandolo/xosproject/xos-ws
       tag: 2.0.0
 xos-db:
   image:
-  repository: 'postgres'
+  repository: 'matteoscandolo/postgres'
   tag: '10.3-alpine'
 
 # synchronizers
 att-workflow-driver:
   image:
-    repository: xosproject/att-workflow-driver-synchronizer
+    repository: matteoscandolo/xosproject/att-workflow-driver-synchronizer
     tag: 'master'
 
 volt:
   image:
-    repository: xosproject/volt-synchronizer
+    repository: matteoscandolo/xosproject/volt-synchronizer
     tag: 'candidate'
 
 rcord:
   image:
-    repository: xosproject/rcord-synchronizer
+    repository: matteoscandolo/xosproject/rcord-synchronizer
     tag: 1.0.4
 
 onos-service:
   image:
-    repository: xosproject/onos-synchronizer
+    repository: matteoscandolo/xosproject/onos-synchronizer
     tag: 2.0.5
 
 fabric:
   image:
-    repository: xosproject/fabric-synchronizer
+    repository: matteoscandolo/xosproject/fabric-synchronizer
     tag: 2.1.3
 
 fabric-crossconnect:
   image:
-    repository: xosproject/fabric-crossconnect-synchronizer
+    repository: matteoscandolo/xosproject/fabric-crossconnect-synchronizer
     tag: 1.1.1
 
 kubernetes:
   image:
-    repository: xosproject/kubernetes-synchronizer
+    repository: matteoscandolo/xosproject/kubernetes-synchronizer
     tag: 1.0.4
 
-tosca_loaderImage: 'xosproject/tosca-loader:1.0.1'
+tosca_loaderImage: 'matteoscandolo/xosproject/tosca-loader:1.0.1'
 
 # others
 sadis-server:
   image:
-    repository: 'opencord/sadis-server'
+    repository: 'matteoscandolo/opencord/sadis-server'
     tag: 'latest'
 
 # kafka
-image: 'confluentinc/cp-kafka:4.1.2-2'
+image: 'matteoscandolo/confluentinc/cp-kafka:4.1.2-2'
 
 zookeper:
-  image: 'google_samples/k8szk:v3'
+  image: 'matteoscandolo/google_samples/k8szk:v3'
 
 etcd-operator:
   etcdOperator:
     image:
-      repository: quay.io/coreos/etcd-operator
+      repository: matteoscandolo/quay.io/coreos/etcd-operator
       tag: v0.7.0
   etcdCluster:
     image:
-      repository: quay.io/coreos/etcd
+      repository: matteoscandolo/quay.io/coreos/etcd
       tag: v3.2.13
   backupOperator:
     image:
-      repository: quay.io/coreos/etcd-operator
+      repository: matteoscandolo/quay.io/coreos/etcd-operator
       tag: v0.7.0
   restoreOperator:
     image:
-      repository: quay.io/coreos/etcd-operator
+      repository: matteoscandolo/quay.io/coreos/etcd-operator
       tag: v0.7.0
 
 application_logs: |
