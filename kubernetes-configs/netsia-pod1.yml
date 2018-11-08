@@ -15,11 +15,29 @@ vcoreImage: 'smbaker/voltha-voltha:tid-grpc'
 
 onosImage: 'onosproject/onos:1.13.5'
 
-xos_coreImage: 'xosproject/xos-core:master'
-fabric:
-  fabric_synchronizerImage: 'xosproject/fabric-synchronizer:master'
 att-workflow-driver:
-  attWorkflowDriver_synchronizerImage: 'xosproject/att-workflow-driver-synchronizer:master'
+  image:
+    #repository: 10.90.0.101:30500/xosproject/att-workflow-driver-synchronizer
+    repository: 'xosproject/att-workflow-driver-synchronizer'
+    tag: master
+
+rcord:
+  image:
+    #repository: 10.90.0.101:30500/xosproject/rcord-synchronizer
+    repository: 'xosproject/rcord-synchronizer'
+    tag: master
+fabric:
+  image:
+    #repository: 10.90.0.101:30500/xosproject/fabric-synchronizer
+    repository: 'xosproject/fabric-synchronizer'
+    tag: master
+
+
+#xos_coreImage: 'xosproject/xos-core:master'
+#fabric:
+#  fabric_synchronizerImage: 'xosproject/fabric-synchronizer:master'
+#att-workflow-driver:
+#  attWorkflowDriver_synchronizerImage: 'xosproject/att-workflow-driver-synchronizer:master'
 
 # application_logs: |
 #   log4j.logger.org.opencord.olt = DEBUG
