@@ -7,23 +7,23 @@
 images:
 
   envoy_for_etcd:
-    repository: 'matteoscandolo/voltha-envoy'
-    tag: 'berlin-1.0.2'
+    repository: 'voltha-envoy'
+    tag: 'berlin'
 
   netconf:
-    repository: 'matteoscandolo/voltha-netconf'
-    tag: 'berlin-1.0.2'
+    repository: 'voltha-netconf'
+    tag: 'berlin'
 
   ofagent:
-    repository: 'matteoscandolo/voltha-ofagent'
-    tag: 'berlin-1.0.2'
+    repository: 'voltha-ofagent'
+    tag: 'berlin'
 
   vcli:
-    repository: 'matteoscandolo/voltha-vcli'
-    tag: 'berlin-1.0.2'
+    repository: 'voltha-vcli'
+    tag: 'berlin'
 
   vcore:
-    repository: 'matteoscandolo/voltha-voltha'
+    repository: 'voltha-voltha'
     tag: 'dev'
 
 # xos core
@@ -64,31 +64,31 @@ sadis-server:
     tag: 'latest'
 
 # kafka
-image: '192.168.100.1:30500/confluentinc/cp-kafka'
+image: 'confluentinc/cp-kafka'
 configurationOverrides:
   "confluent.support.metrics.enable": false
 
 zookeper:
   image:
-    reposiroty: '192.168.100.1:30500/google_samples/k8szk'
+    repository: 'gcr.io/google_samples/k8szk'
     tag: v3
 
 etcd-operator:
   etcdOperator:
     image:
-      repository: 192.168.100.1:30500/quay.io/coreos/etcd-operator
+      repository: quay.io/coreos/etcd-operator
       tag: v0.7.0
   etcdCluster:
     image:
-      repository: 192.168.100.1:30500/quay.io/coreos/etcd
+      repository: quay.io/coreos/etcd
       tag: v3.2.13
   backupOperator:
     image:
-      repository: 192.168.100.1:30500/quay.io/coreos/etcd-operator
+      repository: quay.io/coreos/etcd-operator
       tag: v0.7.0
   restoreOperator:
     image:
-      repository: 192.168.100.1:30500/quay.io/coreos/etcd-operator
+      repository: quay.io/coreos/etcd-operator
       tag: v0.7.0
 
 application_logs: |
