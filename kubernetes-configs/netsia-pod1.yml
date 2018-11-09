@@ -1,32 +1,44 @@
+---
 # SEBA Values
 
-envoyForEtcdImage: 'voltha/voltha-envoy:berlin'
-netconfImage: 'voltha-netconf:berlin'
-ofagentImage: 'voltha-ofagent:berlin'
-vcliImage: 'voltha-cli:berlin'
-#vcoreImage: 'voltha-voltha:dev'
-vcoreImage: 'voltha-voltha:berlin'
-freeradiusImage: 'tpdock/freeradius:latest'
-ingressControllerImage: 'quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.10.2'
-httpBackendImage: 'gcr.io/google_containers/defaultbackend:1.4'
+#global:
+#  registry: '192.168.100.1:30500/'
 
-etcd-operator:
-  etcdCluster:
-    size: 1
+images:
 
-onosImage: 'onosproject/onos:1.13.5'
+  envoy_for_etcd:
+    repository: 'matteoscandolo/voltha-envoy'
+    tag: 'berlin-1.0.2'
+
+  netconf:
+    repository: 'matteoscandolo/voltha-netconf'
+    tag: 'berlin-1.0.2'
+
+  ofagent:
+    repository: 'matteoscandolo/voltha-ofagent'
+    tag: 'berlin-1.0.2'
+
+  vcli:
+    repository: 'matteoscandolo/voltha-vcli'
+    tag: 'berlin-1.0.2'
+
+  vcore:
+    repository: 'matteoscandolo/voltha-voltha'
+    tag: 'dev'
 
 # xos core
-images:
   xos_core:
     repository: xosproject/xos-core
     tag: 2.1.9
+
   xos_chameleon:
     repository: xosproject/chameleon
     tag: 2.1.9
+
   xos_tosca:
     repository: xosproject/xos-tosca
     tag: 1.1.3
+
 xos-gui:
   images:
     xos_gui:
@@ -35,12 +47,15 @@ xos-gui:
     xos_ws:
       repository: xosproject/xos-ws
       tag: 2.0.0
+
 xos-db:
   image:
     repository: 'postgres'
     tag: '10.3-alpine'
 
-tosca_loaderImage: 'xosproject/tosca-loader:1.0.1'
+etcd-operator:
+  etcdCluster:
+    size: 1
 
 # others
 sadis-server:
@@ -49,31 +64,31 @@ sadis-server:
     tag: 'latest'
 
 # kafka
-image: 'confluentinc/cp-kafka'
+image: '192.168.100.1:30500/confluentinc/cp-kafka'
 configurationOverrides:
   "confluent.support.metrics.enable": false
 
 zookeper:
   image:
-    repository: 'gcr.io/google_samples/k8szk'
+    reposiroty: '192.168.100.1:30500/google_samples/k8szk'
     tag: v3
 
 etcd-operator:
   etcdOperator:
     image:
-      repository: quay.io/coreos/etcd-operator
+      repository: 192.168.100.1:30500/quay.io/coreos/etcd-operator
       tag: v0.7.0
   etcdCluster:
     image:
-      repository: quay.io/coreos/etcd
+      repository: 192.168.100.1:30500/quay.io/coreos/etcd
       tag: v3.2.13
   backupOperator:
     image:
-      repository: quay.io/coreos/etcd-operator
+      repository: 192.168.100.1:30500/quay.io/coreos/etcd-operator
       tag: v0.7.0
   restoreOperator:
     image:
-      repository: quay.io/coreos/etcd-operator
+      repository: 192.168.100.1:30500/quay.io/coreos/etcd-operator
       tag: v0.7.0
 
 application_logs: |
