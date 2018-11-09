@@ -37,9 +37,9 @@ sadis-server:
     tag: 'latest'
 
 # kafka
-image: 'confluentinc/cp-kafka'
-configurationOverrides:
-  "confluent.support.metrics.enable": false
+#image: 'confluentinc/cp-kafka'
+#configurationOverrides:
+#  "confluent.support.metrics.enable": false
 
 zookeper:
   image:
