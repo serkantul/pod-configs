@@ -19,7 +19,7 @@ images:
     tag: 'berlin'
 
   vcli:
-    repository: 'voltha/voltha-vcli'
+    repository: 'voltha/voltha-cli'
     tag: 'berlin'
 
   vcore:
