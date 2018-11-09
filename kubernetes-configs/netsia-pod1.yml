@@ -24,7 +24,7 @@ images:
 
   vcore:
     repository: 'voltha-voltha'
-    tag: 'dev'
+    tag: 'berlin'
 
 # xos core
   xos_core:
