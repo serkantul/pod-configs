@@ -7,23 +7,23 @@
 images:
 
   envoy_for_etcd:
-    repository: 'voltha-envoy'
+    repository: 'voltha/voltha-envoy'
     tag: 'berlin'
 
   netconf:
-    repository: 'voltha-netconf'
+    repository: 'voltha/voltha-netconf'
     tag: 'berlin'
 
   ofagent:
-    repository: 'voltha-ofagent'
+    repository: 'voltha/voltha-ofagent'
     tag: 'berlin'
 
   vcli:
-    repository: 'voltha-vcli'
+    repository: 'voltha/voltha-vcli'
     tag: 'berlin'
 
   vcore:
-    repository: 'voltha-voltha'
+    repository: 'voltha/voltha-voltha'
     tag: 'berlin'
 
 # xos core
