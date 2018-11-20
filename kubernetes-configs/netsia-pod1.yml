@@ -8,23 +8,23 @@ images:
 
   envoy_for_etcd:
     repository: 'voltha/voltha-envoy'
-    tag: 'berlin'
+    tag: 'latest'
 
   netconf:
     repository: 'voltha/voltha-netconf'
-    tag: 'berlin'
+    tag: 'latest'
 
   ofagent:
     repository: 'voltha/voltha-ofagent'
-    tag: 'berlin'
+    tag: 'latest'
 
   vcli:
     repository: 'voltha/voltha-cli'
-    tag: 'berlin'
+    tag: 'latest'
 
   vcore:
     repository: 'voltha/voltha-voltha'
-    tag: 'berlin'
+    tag: 'latest'
 
 etcd-operator:
   etcdCluster:
