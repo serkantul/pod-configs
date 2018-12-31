@@ -12,14 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# curl -H "xos-username: admin@opencord.org" -H "xos-password: letmein" -X POST --data-binary @flex-pod1-olt-olt.yaml http://10.192.4.241:30007/run
+# curl -H "xos-username: admin@opencord.org" -H "xos-password: letmein" -X POST --data-binary @onlab-pod1-edgecore.yaml http://10.90.0.101:30007/run
 
 tosca_definitions_version: tosca_simple_yaml_1_0
 imports:
   - custom_types/oltdevice.yaml
   - custom_types/onudevice.yaml
   - custom_types/voltservice.yaml
-
 description: Create a simulated OLT Device in VOLTHA
 topology_template:
   node_templates:
@@ -33,14 +32,15 @@ topology_template:
     olt_device:
       type: tosca.nodes.OLTDevice
       properties:
-        name: olt-1
+        name: ONF OLT
         device_type: openolt
-        host: 10.192.4.206
+        host: 10.90.0.114
         port: 9191
-        switch_datapath_id: of:0000cc37ab5b6da8
-        switch_port: "7"
+        switch_datapath_id: of:0000000000000001
+        switch_port: "1"
         outer_tpid: "0x8100"
         uplink: "65536"
+        nas_id: "NAS_ID"
       requirements:
         - volt_service:
             node: service#volt

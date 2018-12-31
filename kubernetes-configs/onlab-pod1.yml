@@ -1,27 +1,31 @@
+---
 # SEBA Values
 
-#envoyForEtcdImage: 'matteoscandolo/voltha-envoy:berlin-1.0.1'
-#netconfImage: 'matteoscandolo/voltha-netconf:berlin-1.0.1'
-#ofagentImage: 'matteoscandolo/voltha-ofagent:berlin-1.0.1'
-#vcliImage: 'matteoscandolo/voltha-cli:berlin-1.0.1'
-#vcoreImage: 'matteoscandolo/voltha-voltha:berlin-1.0.1'
+# images:
+#   envoy_for_etcd:
+#     repository: 'smbaker/voltha-envoy'
+#     tag: '1.6'
 
-envoyForEtcdImage: 'voltha/voltha-envoy:latest'
-freeradiusImage: 'tpdock/freeradius:latest'
-netconfImage: 'voltha/voltha-netconf:latest'
-ofagentImage: 'voltha/voltha-ofagent:latest'
-vcliImage: 'voltha/voltha-cli:latest'
-vcoreImage: 'smbaker/voltha-voltha:latest'
+#   netconf:
+#     repository: 'smbaker/voltha-netconf'
+#     tag: '1.6'
 
-att-workflow-driver:
-  image:
-    tag: 'master'
+#   ofagent:
+#     repository: 'smbaker/voltha-ofagent'
+#     tag: '1.6'
 
-volt:
-  image:
-    tag: 'master'
+#   vcli:
+#     repository: 'smbaker/voltha-cli'
+#     tag: '1.6'
 
-onosImage: 'onosproject/onos:1.13.5'
+#   vcore:
+#     repository: 'smbaker/voltha-voltha'
+#     tag: '1.6'
+
+# volt:
+#   image:
+#       repository: smbaker/volt-synchronizer
+#       tag: test-syncstep
 
 application_logs: |
   log4j.logger.org.opencord.olt = TRACE

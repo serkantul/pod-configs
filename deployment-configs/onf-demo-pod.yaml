@@ -12,59 +12,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Automated deployment configuration for ONF/ON.Lab physical POD 1
+# Automated deployment configuration for BBWF POD
 
 ---
 
-kube_config: '/var/new_jenkins_home/workspace/admin.conf'
+kube_config: '/var/bbwf.conf'
 
 nodes:
   -
-    ip: '10.90.0.101'
+    ip: '192.168.100.1'
     user: 'cord'
     pass: 'cord'
   -
-    ip: '10.90.0.102'
+    ip: '192.168.100.2'
     user: 'cord'
     pass: 'cord'
   -
-    ip: '10.90.0.103'
+    ip: '192.168.100.3'
     user: 'cord'
     pass: 'cord'
 
 fabric_switches:
   -
     mac: 'cc:37:ab:61:80:ca'
-    ip: '10.90.0.111'
+    ip: '192.168.100.101'
     user: 'root'
     pass: 'onl'
 
 olts:
   -
-    ip: '10.90.0.114'
+    name: 'edgecore'
+    ip: '192.168.100.111'
     user: 'root'
     pass: 'onl'
     fortygig: 'true'
-
-onus:
-  -
-    serial: 'BRCM22222222'
-  -
-    serial: 'ISKT71e801a0'
-  -
-    serial: 'ALPHe3d1cfde'
-
-srcHost:
-  ip: '10.0.3.56'
-  user: 'root'
-  pass: 'root'
-
-hosts:
-  src:
-    ip: '10.90.0.51'
-    user: 'ubuntu'
-    dp_iface_name: 'eth1'
-    container_type: 'LXC'
-    container_name: 'ALPHe3d1cfde'
-  dst:
-    dp_iface_ip_qinq: '8.8.8.8'
