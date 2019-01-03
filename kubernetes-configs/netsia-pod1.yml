@@ -5,64 +5,29 @@
 #  registry: '192.168.100.1:30500/'
 
 images:
-
-  envoy_for_etcd:
-    repository: 'voltha/voltha-envoy'
-    tag: 'latest'
-
   netconf:
     repository: 'voltha/voltha-netconf'
-    tag: 'latest'
+    tag: 'voltha-1.6'
 
   ofagent:
     repository: 'voltha/voltha-ofagent'
-    tag: 'latest'
+    tag: 'voltha-1.6'
 
   vcli:
     repository: 'voltha/voltha-cli'
-    tag: 'latest'
+    tag: 'voltha-1.6'
 
   vcore:
     repository: 'voltha/voltha-voltha'
-    tag: 'latest'
+    tag: 'voltha-1.6'
 
-etcd-operator:
-  etcdCluster:
-    size: 1
+  envoy_for_etcd:
+    repository: 'voltha/voltha-envoy'
+    tag: 'voltha-1.6'
 
-# others
-sadis-server:
-  image:
-    repository: 'opencord/sadis-server'
-    tag: 'latest'
-
-# kafka
-#image: 'confluentinc/cp-kafka'
-#configurationOverrides:
-#  "confluent.support.metrics.enable": false
-
-zookeper:
-  image:
-    repository: 'gcr.io/google_samples/k8szk'
-    tag: v3
-
-etcd-operator:
-  etcdOperator:
-    image:
-      repository: quay.io/coreos/etcd-operator
-      tag: v0.7.0
-  etcdCluster:
-    image:
-      repository: quay.io/coreos/etcd
-      tag: v3.2.13
-  backupOperator:
-    image:
-      repository: quay.io/coreos/etcd-operator
-      tag: v0.7.0
-  restoreOperator:
-    image:
-      repository: quay.io/coreos/etcd-operator
-      tag: v0.7.0
+  alarm_generator:
+    repository: 'voltha/voltha-alarm-generator'
+    tag: 'voltha-1.6'
 
 application_logs: |
   log4j.logger.org.opencord.olt = TRACE
