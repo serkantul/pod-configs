@@ -41,7 +41,12 @@ fabric_switches:
 
 olts:
   -
-    ip: '10.1.50.19'
+    ip: '10.1.50.30'
+    user: 'root'
+    pass: 'onl'
+    fortygig: 'true'  
+  -
+    ip: '10.1.50.18'
     user: 'root'
     pass: 'onl'
     fortygig: 'true'
@@ -53,6 +58,8 @@ onus:
     serial: 'ALPHe3d1d006'
   -
     serial: 'ISKT71e81120'
+  -
+    serial: 'CIGG18c00085'
 
 srcHost:
   ip: '10.1.50.22'
