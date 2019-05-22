@@ -59,3 +59,15 @@ topology_template:
         nas_port_id : "PON 1/1/05/1:1.1.1"
         circuit_id: foo3
         remote_id: bar3
+        
+    my_house4:
+      type: tosca.nodes.RCORDSubscriber
+      properties:
+        name: Sub_CIGG18c00085
+        status: pre-provisioned
+        s_tag: 300
+        c_tag: 104
+        onu_device: CIGG18c00085
+        nas_port_id : "PON 1/1/06/1:1.1.1"
+        circuit_id: foo3
+        remote_id: bar3
