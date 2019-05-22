@@ -53,7 +53,7 @@ topology_template:
             relationship: tosca.relationships.BelongsToOne
        
     # Setup the second OLT switch port
-    port#olt_port:
+    port#olt_port2:
       type: tosca.nodes.SwitchPort
       properties:
         portId: 50
