@@ -34,7 +34,7 @@ topology_template:
       properties:
         name: ONF OLT
         device_type: openolt
-        host: 10.1.50.19
+        host: 10.1.50.201
         port: 9191
         switch_datapath_id: of:0000cc37abeacefa
         switch_port: "49"
